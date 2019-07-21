@@ -1,0 +1,13 @@
+---
+- name: Create a new user on app
+  hosts: all
+  become: true
+  tasks:
+    - name : Creating new user
+      user :
+        name : "{{ sname }}"
+        password : "{{ 'Abc123 | password_hash('sha512') }}"
+        comment : "sfull"
+        shell : /bin/bash
+        home : /home/{{ sname }}    
+        group: "{{ sname }}
