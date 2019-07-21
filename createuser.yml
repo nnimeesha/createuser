@@ -10,4 +10,4 @@
         comment : "sfull"
         shell : /bin/bash
         home : /home/{{ sname }}    
-        group: "{{ sname }}
+        group: "{{ sname }}"
