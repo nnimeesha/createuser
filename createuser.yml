@@ -3,6 +3,10 @@
   hosts: all
   become: true
   tasks:
+    - name: Ensure group "somegroup" exists
+      group:
+        name: "{{ sname }}"
+        state: present
     - name : Creating new user
       user :
         name : "{{ sname }}"
